@@ -1,0 +1,9 @@
+﻿<Window x:Class="PerSPer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PerSPer" Height="350" Width="525">
+    <Grid>
+        <DocumentViewer HorizontalAlignment="Left" Margin="835,-58,-418,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>
