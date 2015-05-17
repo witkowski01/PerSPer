@@ -245,6 +245,18 @@
             <param name="enrichmentConfiguration">Logger enrichment configuration.</param>
             <returns>Configuration object allowing method chaining.</returns>
         </member>
+        <member name="M:Serilog.LoggerConfigurationFullNetFxExtensions.AppSettings(Serilog.Configuration.LoggerSettingsConfiguration)">
+            <summary>
+            Reads the &lt;appSettings&gt; element of App.config or Web.config, searching for for keys
+            that look like: <code>serilog:*</code>, which are used to configure
+            the logger. To add a sink, use a key like <code>serilog:write-to:File.path</code> for
+            each parameter to the sink's configuration method. To add an additional assembly
+            containing sinks, use <code>serilog:using</code>. To set the level use 
+            <code>serilog:minimum-level</code>.
+            </summary>
+            <param name="settingConfiguration">Logger setting configuration</param>
+            <returns>An object allowing configuration to continue.</returns>
+        </member>
         <member name="T:Serilog.Sinks.IOFile.FileSink">
             <summary>
             Write log events to a disk file.
@@ -334,6 +346,16 @@
             Emit a batch of log events, running to completion synchronously.
             </summary>
             <param name="events">The events to emit.</param>
+            <remarks>Override either <see cref="M:Serilog.Sinks.PeriodicBatching.PeriodicBatchingSink.EmitBatch(System.Collections.Generic.IEnumerable{Serilog.Events.LogEvent})"/> or <see cref="M:Serilog.Sinks.PeriodicBatching.PeriodicBatchingSink.EmitBatchAsync(System.Collections.Generic.IEnumerable{Serilog.Events.LogEvent})"/>,
+            not both.</remarks>
+        </member>
+        <member name="M:Serilog.Sinks.PeriodicBatching.PeriodicBatchingSink.EmitBatchAsync(System.Collections.Generic.IEnumerable{Serilog.Events.LogEvent})">
+            <summary>
+            Emit a batch of log events, running asynchronously.
+            </summary>
+            <param name="events">The events to emit.</param>
+            <remarks>Override either <see cref="M:Serilog.Sinks.PeriodicBatching.PeriodicBatchingSink.EmitBatch(System.Collections.Generic.IEnumerable{Serilog.Events.LogEvent})"/> or <see cref="M:Serilog.Sinks.PeriodicBatching.PeriodicBatchingSink.EmitBatchAsync(System.Collections.Generic.IEnumerable{Serilog.Events.LogEvent})"/>,
+            not both. Overriding EmitBatch() is preferred.</remarks>
         </member>
         <member name="M:Serilog.Sinks.PeriodicBatching.PeriodicBatchingSink.Emit(Serilog.Events.LogEvent)">
             <summary>

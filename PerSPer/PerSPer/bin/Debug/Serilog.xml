@@ -4,6 +4,17 @@
         <name>Serilog</name>
     </assembly>
     <members>
+        <member name="T:Serilog.Configuration.ILoggerSettings">
+            <summary>
+            Implemented on types that apply settings to a logger configuration.
+            </summary>
+        </member>
+        <member name="M:Serilog.Configuration.ILoggerSettings.Configure(Serilog.LoggerConfiguration)">
+            <summary>
+            Apply the settings to the logger configuration.
+            </summary>
+            <param name="loggerConfiguration">The logger configuration to apply settings to.</param>
+        </member>
         <member name="T:Serilog.Configuration.LoggerDestructuringConfiguration">
             <summary>
             Controls template parameter destructuring configuration.
@@ -59,6 +70,24 @@
             <param name="maximumDestructuringDepth">The maximum depth to use.</param>
             <returns>Configuration object allowing method chaining.</returns>
             <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Serilog.Configuration.LoggerSettingsConfiguration">
+            <summary>
+            Allows additional setting sources to drive the logger configuration.
+            </summary>
+        </member>
+        <member name="M:Serilog.Configuration.LoggerSettingsConfiguration.Settings(Serilog.Configuration.ILoggerSettings)">
+            <summary>
+            Apply external settings to the logger configuration.
+            </summary>
+            <returns>Configuration object allowing method chaining.</returns>
+        </member>
+        <member name="M:Serilog.Configuration.LoggerSettingsConfiguration.KeyValuePairs(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Apply settings specified in the Serilog key-value setting format to the logger configuration.
+            </summary>
+            <param name="settings">A list of key-value pairs describing logger settings.</param>
+            <returns>Configuration object allowing method chaining.</returns>
         </member>
         <member name="T:Serilog.Configuration.LoggerFilterConfiguration">
             <summary>
@@ -1607,6 +1636,11 @@
         <member name="P:Serilog.LoggerConfiguration.Destructure">
             <summary>
             Configures destructuring of message template parameters.
+            </summary>
+        </member>
+        <member name="P:Serilog.LoggerConfiguration.ReadFrom">
+            <summary>
+            Apply external settings to the logger configuration.
             </summary>
         </member>
         <member name="T:Serilog.Parsing.Destructuring">
