@@ -1,0 +1,49 @@
+﻿@model IEnumerable<InterVision.Models.UserInConversation>
+
+@{
+    ViewBag.Title = "User in conversation";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Add new user to conversation", "Create", new { ConversationId = (int)ViewBag.ConversationId }, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationUser.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conversation.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationUser.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conversation.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id } , new{@class="btn btn-warning btn-sm"}) 
+            @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-default btn-sm" }) 
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm" })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to conversations list", "Index", "Conversations", null, new { @class = "btn btn-primary" })
+</div>

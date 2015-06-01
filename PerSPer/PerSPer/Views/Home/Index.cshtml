@@ -1,0 +1,27 @@
+﻿@using InterVision.Controllers
+@using InterVision.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Crete new video conversation</h2>
+        <p>
+            To create new video conversation you need to register and sign in first.
+        </p>
+        @Html.ActionLink("Create new conversation", "Create", "Conversations",null, new { @class = "btn btn-success" })
+    </div>
+    <div class="col-md-4">
+        <h2>Go to your conversations</h2>
+        <p>This link allows you to see list of your conversations.
+           From that page you can menage your conversation, and join to see your conversators.
+        </p>
+        @Html.ActionLink("Conversations","Index", "Conversations" ,null, new {@class = "btn btn-primary"})
+    </div>
+    <div class="col-md-4">
+        <h2>Account management.</h2>
+        <p>You can easily manage your profile from that page, change password and manage yours external login.</p>
+        <p>@Html.ActionLink("Manage account", "Index", "Manage", null, new { @class = "btn btn-primary" })</p>
+    </div>
+</div>

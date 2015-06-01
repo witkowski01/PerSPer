@@ -1,0 +1,47 @@
+﻿@model IEnumerable<InterVision.Models.Conversation>
+
+@{
+    ViewBag.Title = "Conversation Index";
+}
+
+<h2>My conversations</h2>
+
+<p>
+    @Html.ActionLink("Create new conversation", "Create", null, new {@class = "btn btn-success"})
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            <h4>Conversations name:</h4>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+       
+        {
+
+
+            <tr>
+                <td>
+                    <h4><strong>@Html.DisplayFor(modelItem => item.Name)</strong></h4>
+                </td>
+                <td>
+                    @Html.ActionLink("Join to conversation", "Details", new {id = item.Id}, new {@class = "btn btn-success"})
+
+                    @Html.ActionLink("Members", "Index", "UserInConversations", new { ConversationId = item.Id }, new { @class = "btn btn-success" })
+
+                    @Html.ActionLink("Edit", "Edit", new {id = item.Id}, new {@class = "btn btn-warning"})
+
+                    @Html.ActionLink("Delete", "Delete", new {id = item.Id}, new {@class = "btn btn-danger"})
+                </td>
+            </tr>
+        
+        }
+
+    }
+
+</table>

@@ -1,0 +1,59 @@
+﻿@model InterVision.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage Index";
+}
+
+<h2>Manage your account settings</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Password:</dt>
+        <dd>
+            
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Change your password", "ChangePassword" , null, new{@class="btn btn-warning btn-sm"})
+            }
+            else
+            {
+                @Html.ActionLink("Create", "SetPassword")  // Options available if account was created by external service like google.com
+            }
+            
+        </dd>
+        <dt>External Logins:</dt>
+        <dd>
+            Number of external logins: @Model.Logins.Count
+
+            @Html.ActionLink("Manage external logins", "ManageLogins", null, new{@class="btn btn-default btn-sm"})
+        </dd>
+        @*
+            Phone Numbers can used as a second factor of verification in a two-factor authentication system.
+             
+             See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+             
+             Uncomment the following block after you have set up two-factor authentication
+        *@
+        @*  
+            <dt>Phone Number:</dt>
+            <dd>
+                @(Model.PhoneNumber ?? "None") [
+                @if (Model.PhoneNumber != null)
+                {
+                    @Html.ActionLink("Change", "AddPhoneNumber")
+                    @: &nbsp;|&nbsp;
+                    @Html.ActionLink("Remove", "RemovePhoneNumber")
+                }
+                else
+                {
+                    @Html.ActionLink("Add", "AddPhoneNumber")
+                }
+                ]
+            </dd>
+        *@
+
+    </dl>
+</div>
