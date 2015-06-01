@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using InterVision.Models;
+using PerSPer.Models;
 
-namespace InterVision
+namespace PerSPer
 {
     public class EmailService : IIdentityMessageService
     {

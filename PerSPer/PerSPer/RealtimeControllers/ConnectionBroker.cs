@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using InterVision.RealtimeControllers.Constants;
-using InterVision.RealtimeControllers.Models;
+using PerSPer.RealtimeControllers.Constants;
+using PerSPer.RealtimeControllers.Models;
 using XSockets.Core.Common.Socket.Event.Arguments;
 using XSockets.Core.Common.Socket.Event.Attributes;
 using XSockets.Core.Common.Socket.Event.Interface;
@@ -12,7 +12,7 @@ using XSockets.Core.XSocket;
 using XSockets.Core.XSocket.Helpers;
 using XSockets.Plugin.Framework;
 
-namespace InterVision.RealtimeControllers
+namespace PerSPer.RealtimeControllers
 { 
     /// <summary>
     /// A custom Peerbroker for WebRTC signaling and WebSocket communication on top of XSockets.NET

@@ -6,10 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using InterVision.Models;
+using PerSPer.Models;
 using Microsoft.AspNet.Identity;
 
-namespace InterVision.Controllers
+namespace PerSPer.Controllers
 {
     [Authorize]
     public class ConversationsController : Controller

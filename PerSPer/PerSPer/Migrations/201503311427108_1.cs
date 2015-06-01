@@ -1,4 +1,4 @@
-namespace InterVision.Migrations
+namespace PerSPer.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

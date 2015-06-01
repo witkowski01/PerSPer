@@ -1,11 +1,11 @@
 using System.Web.Http;
 using WebActivatorEx;
-using InterVision;
+using PerSPer;
 using Swashbuckle.Application;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace InterVision
+namespace PerSPer
 {
     public class SwaggerConfig
     {

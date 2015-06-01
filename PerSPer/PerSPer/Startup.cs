@@ -2,8 +2,8 @@
 using Owin;
 using XSockets.Owin.Host;
 
-[assembly: OwinStartupAttribute(typeof(InterVision.Startup))]
-namespace InterVision
+[assembly: OwinStartupAttribute(typeof(PerSPer.Startup))]
+namespace PerSPer
 {
     public partial class Startup
     {

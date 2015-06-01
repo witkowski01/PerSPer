@@ -1,4 +1,4 @@
-namespace InterVision.RealtimeControllers.Models
+namespace PerSPer.RealtimeControllers.Models
 {
     public enum Availability
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using InterVision.RealtimeControllers.Models;
+using PerSPer.RealtimeControllers.Models;
 using XSockets.Core.Common.Socket.Event.Interface;
 
-namespace InterVision.RealtimeControllers
+namespace PerSPer.RealtimeControllers
 {
     public interface IConnectionBroker
     {

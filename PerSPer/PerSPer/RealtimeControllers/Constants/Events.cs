@@ -1,4 +1,4 @@
-﻿namespace InterVision.RealtimeControllers.Constants
+﻿namespace PerSPer.RealtimeControllers.Constants
 {
     public static class Events
     {
