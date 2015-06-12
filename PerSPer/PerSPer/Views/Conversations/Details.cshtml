@@ -1,4 +1,5 @@
 ﻿@using System.Security.Cryptography.X509Certificates;
+@using PerSPer.Models
 @using XSockets.Core.Configuration;
 
 @model PerSPer.Models.Conversation
@@ -116,7 +117,27 @@
         document.addEventListener("DOMContentLoaded", function() {
             // connect to the server using a predefined context (a.k.a room )
             // we pass a 'static' guid as a parameters , see ctx below
-            context = '1c743b9b-f19f-4b74-a472-4081dbc14f43';
+
+            //This is how i get separate room to all conversations 
+
+            var roomID = @Model.Id;
+            var roomIDString = roomID.toString();
+
+            if (roomID<10) {
+                roomIDString = '0' + roomID.toString();
+
+                context = '1c743b9b-f19f-4b74-a472-4081dbc14f'+roomIDString;
+            }
+            if (roomID>=100) {
+                roomIDString =roomID.toString();
+                context = '1c743b9b-f19f-4b74-a472-4081dbc14'+roomIDString;
+            }
+            if (roomID>=1000) {
+                roomIDString =roomID.toString();
+                context = '1c743b9b-f19f-4b74-a472-4081dbc1'+roomIDString;
+            }
+            // If you want more conversations create more if(roomID ...
+
             wss = new XSockets.WebSocket("wss://" + location.host, ["connectionbroker"], {
                 ctx: context
             });

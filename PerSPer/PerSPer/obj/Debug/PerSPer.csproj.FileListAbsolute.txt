@@ -180,7 +180,6 @@ C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\bin\XSockets.Plugin.
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\bin\XSockets.Protocol.xml
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\bin\XSockets.Serialization.xml
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\bin\XSockets.Server.xml
-C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\PerSPer.csprojResolveAssemblyReference.cache
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\PerSPer.csproj.GenerateResource.Cache
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\InterVision.dll
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\InterVision.pdb
