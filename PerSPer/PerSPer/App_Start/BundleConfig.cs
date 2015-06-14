@@ -23,6 +23,12 @@ namespace PerSPer
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/xcockets").Include(
+          "~/Scripts/XSockets.latest.js",
+          "~/Scripts/XSockets.WebRTC.latest.js")); 
+
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

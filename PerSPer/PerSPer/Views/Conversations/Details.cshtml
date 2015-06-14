@@ -14,6 +14,7 @@
     <title>@ViewBag.Title - PerSPer</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/xcockets")
     <style>
         #localVideo {
             position: absolute;
@@ -101,9 +102,7 @@
         <h3>Me</h3>
         <video autoplay muted></video> <!-- important to start video after user join to conversation -->
     </div>
-    <!-- Get the nessassary JavaScript libraries -->
-    <script src="/Views/Conversations/Scripts/XSockets.latest.js"></script>
-    <script src="/Views/Conversations/Scripts/XSockets.WebRTC.latest.js"></script>
+
     <!-- XVA-- WebRTC Basic -->
     <script>
         function $(selector, el) {
