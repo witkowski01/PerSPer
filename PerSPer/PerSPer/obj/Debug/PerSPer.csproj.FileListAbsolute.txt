@@ -91,3 +91,4 @@ C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\PerSPer.Mi
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\PerSPer.csproj.GenerateResource.Cache
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\PerSPer.dll
 C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\PerSPer.pdb
+C:\Users\witko_000\Documents\GitHub\PerSPer\PerSPer\PerSPer\obj\Debug\PerSPer.csprojResolveAssemblyReference.cache
